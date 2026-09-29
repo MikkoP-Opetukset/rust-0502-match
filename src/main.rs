@@ -21,7 +21,10 @@ enum Direction {
 }
 
 /// A dice roll used when the player finds an item.
-// `Copy` lets this value be used in two matches. Traits are covered later.
+// `Copy` and `Clone` are traits that the DiceRoll implements. These mark the
+// enum as clonable and copyable so this DiceRoll now behaves more like the
+// primary scalar types. We will cover traits in more detail later during the
+// course.
 #[derive(Clone, Copy)]
 enum DiceRoll {
     One,
